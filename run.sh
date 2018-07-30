@@ -71,29 +71,25 @@ r -e 'install.packages("DT")'
 r -e 'install.packages("scales")'
 r -e 'install.packages("ggthemes")'
 
-# Install sf package (R)
-apt-get install -y libudunits2-dev
+# Install sf
+add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+apt-get update
+apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
+r -e 'install.packages("sf")'
+r -e 'install.packages("RPostgreSQL")'
+apt-get install -y libpq-dev 
 apt-get install -y fftw3 fftw3-dev pkg-config
 apt-get install -y libtiff-dev
 apt-get install -y aptitude 
-apt-get install -y libgdal-dev 
-apt-get install -y libproj-dev 
-apt-get install -y libpng-dev
-apt-get install -y libpq-dev 
-sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
-sudo apt update 
-sudo apt -y upgrade # if you already have gdal 1.11 installed 
-sudo apt-get install -y gdal-bin python-gdal python3-gdal 
-apt-get install -y libgdal1i
-apt-get install -y libgdal1-dev
-r -e 'install.packages("RPostgreSQL")'
-r -e 'install.packages("sf")'
 
 # More spatial package downloads
 r -e 'install.packages("leaflet")'
 r -e 'install.packages("dygraphs")'
 r -e 'install.packages("rgdal")'
 r -e 'install.packages("rgeos")'
+
+# Install sf package (R)
+apt-get install -y libudunits2-dev
 
 # Install imagemagick for easy image manipulation
 sudo apt-get -y install imagemagick
