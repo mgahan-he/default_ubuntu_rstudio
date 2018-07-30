@@ -18,7 +18,8 @@ RUN apt-get update && apt-get install -y \
     pandoc-citeproc \
     libcurl4-gnutls-dev \
     libcairo2-dev \
-    libxt-dev
+    libxt-dev \
+    net-tools
 
 # AWS CLI needs the PYTHONIOENCODING environment varialbe to handle UTF-8 correctly:
 # https://hub.docker.com/r/fstab/aws-cli/
