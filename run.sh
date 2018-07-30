@@ -119,3 +119,9 @@ r -e 'install.packages("softImpute")'
 r -e 'install.packages("odbc")'
 r -e 'install.packages("rmarkdown")'
 
+# more packages
+r -e 'install.packages("RJDBC")'
+r -e 'install.packages("googleAuthR")'
+r -e 'install.packages("googleAnalyticsR")'
+
+
