@@ -88,9 +88,6 @@ r -e 'install.packages("dygraphs")'
 r -e 'install.packages("rgdal")'
 r -e 'install.packages("rgeos")'
 
-# Install sf package (R)
-apt-get install -y libudunits2-dev
-
 # Install imagemagick for easy image manipulation
 sudo apt-get -y install imagemagick
 
