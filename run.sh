@@ -117,5 +117,5 @@ r -e 'install.packages("dbplyr")'
 r -e 'install.packages("forecast")'
 r -e 'install.packages("softImpute")'
 r -e 'install.packages("odbc")'
-
+r -e 'install.packages("rmarkdown")'
 
