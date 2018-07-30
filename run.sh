@@ -124,6 +124,21 @@ r -e 'install.packages("RJDBC")'
 r -e 'install.packages("googleAuthR")'
 r -e 'install.packages("googleAnalyticsR")'
 
+# install sql-server
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+apt-get install -y unixodbc-dev
+odbcinst -j
+cat /etc/odbcinst.ini
+
 # install database drivers
 # Install the unixODBC library
 apt-get install -y unixodbc unixodbc-dev
@@ -136,3 +151,4 @@ apt-get install -y odbc-postgresql
 
 # SQLite ODBC Drivers
 apt-get install -y libsqliteodbc
+
