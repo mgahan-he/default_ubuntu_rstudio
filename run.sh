@@ -124,4 +124,15 @@ r -e 'install.packages("RJDBC")'
 r -e 'install.packages("googleAuthR")'
 r -e 'install.packages("googleAnalyticsR")'
 
+# install database drivers
+# Install the unixODBC library
+apt-get install -y unixodbc unixodbc-dev
 
+# SQL Server ODBC Drivers (Free TDS)
+apt-get install -y tdsodbc
+
+# PostgreSQL ODBC ODBC Drivers
+apt-get install -y odbc-postgresql
+
+# SQLite ODBC Drivers
+apt-get install -y libsqliteodbc
