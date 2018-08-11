@@ -70,11 +70,13 @@ r -e 'install.packages("dygraphs")'
 r -e 'install.packages("DT")'
 r -e 'install.packages("scales")'
 r -e 'install.packages("ggthemes")'
+r -e 'install.packages("rmarkdown")'
+r -e 'install.packages("pacman")'
 
 # Install sf
 add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 apt-get update
-apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
+apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 r -e 'install.packages("sf")'
 r -e 'install.packages("RPostgreSQL")'
 apt-get install -y libpq-dev 
@@ -114,7 +116,8 @@ apt-get install -y docker-ce
 r -e 'install.packages("dplyr")'
 r -e 'install.packages("RODBC")'
 r -e 'install.packages("dbplyr")'
-r -e 'install.packages("forecast")'
+#r -e 'install.packages("forecast")'
+r -e 'devtools::install_version("forecast", version = "8.2", repos = "http://cran.us.r-project.org")'
 r -e 'install.packages("softImpute")'
 r -e 'install.packages("odbc")'
 r -e 'install.packages("rmarkdown")'
