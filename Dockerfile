@@ -51,4 +51,5 @@ RUN bash Miniconda3-latest-Linux-x86_64.sh
 CMD ["/bin/bash"]
 
 # Upload
+# docker build -t mgahan/datascience_image:latest .
 # docker push mgahan/datascience_image:latest
