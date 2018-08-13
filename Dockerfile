@@ -41,11 +41,13 @@ RUN r -e 'install.packages("CausalImpact")'
 RUN r -e 'install.packages("h2o", repos=(c("http://s3.amazonaws.com/h2o-release/h2o/master/1497/R", getOption("repos"))))'
 RUN r -e 'install.packages("future.apply")'
 RUN r -e 'install.packages("roxygen2")'
+RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get install -y apt-transport-https
 RUN apt-get update
 RUN apt-get install -y python3.6
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-RUN bash Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b
 
 # Login
 CMD ["/bin/bash"]
