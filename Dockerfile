@@ -8,7 +8,7 @@ MAINTAINER "Mike Gahan" michael.gahan@gmail.com
 ENV DEBIAN_FRONTEND noninteractive
 
 ## Document last time updated
-ENV LAST_UPDATE=2016-10-19
+ENV LAST_UPDATE=2018-08-13
 
 ## Update & upgrade
 RUN apt-get update && apt-get install -y \
