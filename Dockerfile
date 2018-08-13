@@ -39,6 +39,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # More install
 RUN r -e 'install.packages("CausalImpact")'
 RUN r -e 'install.packages("h2o", repos=(c("http://s3.amazonaws.com/h2o-release/h2o/master/1497/R", getOption("repos"))))'
+RUN r -e 'install.packages("future.apply")'
+RUN r -e 'install.packages("roxygen2")'
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
 RUN apt-get install -y python3.6
