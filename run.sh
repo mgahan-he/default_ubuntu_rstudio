@@ -72,6 +72,7 @@ r -e 'install.packages("scales")'
 r -e 'install.packages("ggthemes")'
 r -e 'install.packages("rmarkdown")'
 r -e 'install.packages("pacman")'
+r -e 'install.packages("roxygen2")'
 
 # Install sf
 add-apt-repository ppa:ubuntugis/ubuntugis-unstable
