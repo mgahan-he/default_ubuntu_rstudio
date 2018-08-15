@@ -49,6 +49,15 @@ RUN apt-get install -y python3.6
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b
 
+# more install
+RUN apt-get install -y libprotobuf-dev  protobuf-compiler
+RUN add-apt-repository -y ppa:opencpu/jq
+RUN apt-get update -q
+RUN apt-get install -y libjq-dev
+RUN apt-get install -y libv8-3.14-dev
+RUN r -e 'install.packages("geojsonio")'
+
+
 # Login
 CMD ["/bin/bash"]
 
