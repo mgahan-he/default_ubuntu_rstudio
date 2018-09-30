@@ -57,6 +57,11 @@ RUN apt-get install -y libjq-dev
 RUN apt-get install -y libv8-3.14-dev
 RUN r -e 'install.packages("geojsonio")'
 
+RUN r -e 'install.packages("car")'
+RUN r -e 'install.packages("shinyjs")'
+RUN apt-get install libboost-all-dev
+
+
 
 # Login
 CMD ["/bin/bash"]
