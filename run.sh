@@ -76,6 +76,7 @@ r -e 'install.packages("roxygen2")'
 r -e 'install.packages("gtrendsR")'
 
 # Install sf
+apt install -y software-properties-common
 add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 apt-get update
 apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
@@ -87,6 +88,7 @@ apt-get install -y libtiff-dev
 apt-get install -y aptitude 
 
 # More spatial package downloads
+r -e 'install.packages("caTools")'
 r -e 'install.packages("leaflet")'
 r -e 'install.packages("dygraphs")'
 r -e 'install.packages("rgdal")'
