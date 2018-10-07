@@ -42,12 +42,12 @@ apt-get install -y r-cran-littler
 
 # Install rstudio-server
 cd /root
-wget https://download2.rstudio.org/rstudio-server-1.1.423-amd64.deb
-sudo gdebi -n rstudio-server-1.1.423-amd64.deb
+wget https://download2.rstudio.org/rstudio-server-1.1.456-amd64.deb
+sudo gdebi -n rstudio-server-1.1.456-amd64.deb
 
 # Install shiny-server
-wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb
-sudo gdebi -n shiny-server-1.5.7.907-amd64.deb
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.9.923-amd64.deb
+sudo gdebi -n  shiny-server-1.5.9.923-amd64.deb
 
 # Install R-pacakges
 r -e 'install.packages("data.table")'
@@ -73,6 +73,7 @@ r -e 'install.packages("ggthemes")'
 r -e 'install.packages("rmarkdown")'
 r -e 'install.packages("pacman")'
 r -e 'install.packages("roxygen2")'
+r -e 'install.packages("gtrendsR")'
 
 # Install sf
 add-apt-repository ppa:ubuntugis/ubuntugis-unstable
