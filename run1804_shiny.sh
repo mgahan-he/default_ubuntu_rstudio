@@ -76,9 +76,24 @@ sudo gdebi shiny-server-1.5.9.923-amd64.deb
 # Create users
 addgroup datasci
 useradd -m mgahan
-passwd mgahan
+useradd -m tbobik
+useradd -m zkhor
+useradd -m jandrews
+
+usermod --password XXXXXX mgahan
+usermod --password XXXXXX tbobik
+usermod --password XXXXXX zkhor
+usermod --password XXXXXX jandrews
+
 usermod -G datasci mgahan
+usermod -G datasci tbobik
+usermod -G datasci zkhor
+usermod -G datasci jandrews
+
 adduser mgahan sudo
+adduser tbobik sudo
+adduser zkhor sudo
+adduser jandrews sudo
 
 # Install R-pacakges
 r -e 'install.packages("data.table")'
